@@ -47,7 +47,3 @@ def delete(id):
     except:
         return 'There was an issue deleting your task'
 
-
-if __name__ == "__main__":
-    db.create_all()
-    app.run(debug=False,host='0.0.0.0')
