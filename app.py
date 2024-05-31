@@ -45,7 +45,3 @@ def delete(id):
         return redirect('/')
     except:
         return 'There was an issue deleting your task'
-
-if __name__ == "__main__":
-    db.create_all()
-    app.run(debug=True)
