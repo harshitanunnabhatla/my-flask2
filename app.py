@@ -21,6 +21,7 @@ def index():
                 db.session.commit()
                 return redirect('/')
             except:
+
                 return 'There was an issue adding your task'
     else:
         tasks = Task.query.order_by(Task.id).all()
@@ -45,3 +46,8 @@ def delete(id):
         return redirect('/')
     except:
         return 'There was an issue deleting your task'
+
+
+if __name__ == "__main__":
+    db.create_all()
+    app.run(debug=False,host='0.0.0.0')
